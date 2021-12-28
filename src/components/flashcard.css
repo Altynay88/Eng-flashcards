@@ -1,0 +1,36 @@
+.cardTable {
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 25px;
+}
+
+.cardlist .grey-line {
+  background-color: #f5f5f5;
+}
+
+.primaryBtn {
+  margin-right: 20px;
+}
+
+.successBtn {
+  margin-right: 15px;
+}
+
+.trainingNav {
+  border: 1px solid #2eb9ce;
+}
+
+.cardbox {
+  width: 20%;
+  height: 60px;
+  border-radius: 18px;
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
+
+.cardFooter {
+  margin-top: 120px;
+  height: 50px;
+  text-align: center;
+  background-color: #f5f5f5;
+}
