@@ -1,6 +1,7 @@
 import { Table, Button } from "react-bootstrap";
 import "./flashcard.css";
 import data from "./data.js";
+import { useState } from "react";
 
 function Cardlist() {
   return (
@@ -24,33 +25,88 @@ function Cardlist() {
   );
 }
 
-function Word({ id, english, russian, transcription, isEditBtn }) {
-  return (
-    <tr>
-      <td>{isEditBtn ? <input defaultValue={english} /> : english}</td>
-      <td>{isEditBtn ? <input defaultValue={russian} /> : russian}</td>
-      <td>
-        {isEditBtn ? <input defaultValue={transcription} /> : transcription}
-      </td>
-      <td>
-        {isEditBtn ? (
-          <Button variant="success" className="successBtn">
-            Save
-          </Button>
-        ) : null}
-        {isEditBtn ? null : (
-          <Button variant="primary" className="primaryBtn">
+function Word({ id, english, russian, transcription }) {
+  const [isEditBtn, changeEditBtn] = useState(false);
+
+  const [word, setWord] = useState({ english, russian, transcription });
+
+  function onClick() {
+    changeEditBtn(true);
+  }
+
+  function onChangeEnglish(evt) {
+    setWord({
+      english: evt.target.value,
+      russian: word.russian,
+      transcription: word.transcription,
+    });
+  }
+
+  function onChangeRussian(evt) {
+    setWord({
+      english: word.english,
+      russian: evt.target.value,
+      transcription: word.transcription,
+    });
+  }
+
+  function onChangeTranscription(evt) {
+    setWord({
+      english: word.english,
+      russian: word.russian,
+      transcription: evt.target.value,
+    });
+  }
+
+  function onSave() {
+    changeEditBtn(false);
+  }
+
+  function onCancel(evt) {
+    setWord({
+      english,
+      russian,
+      transcription,
+    });
+    changeEditBtn(false);
+  }
+
+  if (!isEditBtn) {
+    return (
+      <tr>
+        <td>{word.english}</td>
+        <td>{word.russian}</td>
+        <td>{word.transcription}</td>
+        <td>
+          <Button onClick={onClick} variant="primary" className="primaryBtn">
             Edit
           </Button>
-        )}
-        {isEditBtn ? (
-          <Button variant="danger">Cancel</Button>
-        ) : (
-          <Button variant="danger">Delete</Button>
-        )}
-      </td>
-    </tr>
-  );
+          <Button onClick={onCancel} variant="danger">
+            Cancel
+          </Button>
+        </td>
+      </tr>
+    );
+  } else {
+    return (
+      <tr>
+        <td>
+          <input value={word.english} onChange={onChangeEnglish} />
+        </td>
+        <td>
+          <input value={word.russian} onChange={onChangeRussian} />
+        </td>
+        <td>
+          <input value={word.transcription} onChange={onChangeTranscription} />
+        </td>
+        <td>
+          <Button onClick={onSave} variant="success" className="successBtn">
+            Save
+          </Button>
+        </td>
+      </tr>
+    );
+  }
 }
 
 export default Cardlist;

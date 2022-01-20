@@ -1,5 +1,6 @@
 import { Card, Button } from "react-bootstrap";
 import "./flashcard.css";
+import data from "./data.js";
 
 function TrainingCard() {
   return (
