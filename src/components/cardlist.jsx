@@ -1,6 +1,6 @@
 import { Table, Button } from "react-bootstrap";
 import "./flashcard.css";
-import data from "./data.js";
+import data from "../data.js";
 import { useState } from "react";
 
 function Cardlist() {

@@ -10,7 +10,7 @@ function App() {
       </header>
       <main>
         <Cardlist></Cardlist>
-        <TrainingCard />
+        <TrainingCard></TrainingCard>
       </main>
       <footer className="cardFooter">© 2021 Englsih flashcards</footer>
     </div>
