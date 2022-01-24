@@ -24,7 +24,7 @@ function TrainingCard() {
             {"<"}
           </Button>
         )}
-        <Card className="text-center">
+        <Card className="small-card">
           <Card.Header>{data[currentIndex].english}</Card.Header>
           <Card.Body>
             <Card.Text>{data[currentIndex].transcription}</Card.Text>

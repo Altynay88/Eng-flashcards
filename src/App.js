@@ -1,19 +1,24 @@
-import Cardlist from "./components/cardlist";
+import React from "react";
 import Menu from "./components/navbar";
+import Cardlist from "./components/cardlist";
 import TrainingCard from "./components/training";
+import Homepage from "./components/homepage";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <Menu></Menu>
-      </header>
-      <main>
-        <Cardlist></Cardlist>
-        <TrainingCard></TrainingCard>
-      </main>
-      <footer className="cardFooter">© 2021 Englsih flashcards</footer>
-    </div>
+    <Router>
+      <Menu
+        logo={<Link to="/">Flashcards</Link>}
+        home={<Link to="/cardlist">Cardlist</Link>}
+        training={<Link to="/training">Training</Link>}
+      />
+      <Routes>
+        <Route path="/" element={<Homepage></Homepage>}></Route>
+        <Route path="training" element={<TrainingCard></TrainingCard>}></Route>
+        <Route path="cardlist" element={<Cardlist></Cardlist>}></Route>
+      </Routes>
+    </Router>
   );
 }
 
