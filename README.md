@@ -1,4 +1,7 @@
-![Снимок экрана (193)](https://user-images.githubusercontent.com/79243168/150857470-11e7d0ce-e7d9-4a12-acf2-90acc7111d93.png)
+![Снимок экрана (182)](https://user-images.githubusercontent.com/79243168/150857695-a9aed34b-d241-46cf-ba74-1b2d06ac3bab.png)
+![Снимок экрана (191)](https://user-images.githubusercontent.com/79243168/150857698-e7f21fd4-bec6-4674-a087-ec570b292aaf.png)
+![Снимок экрана (192)](https://user-images.githubusercontent.com/79243168/150857699-4dc1eff7-ee25-40f9-bb36-66af9e1367f2.png)
+![Снимок экрана (193)](https://user-images.githubusercontent.com/79243168/150857702-2dec3367-c901-4579-92ef-ae3861928327.png)
 
 
 # Getting Started with Create React App
