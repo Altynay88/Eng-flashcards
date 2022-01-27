@@ -5,6 +5,7 @@
 ![Снимок экрана (198)](https://user-images.githubusercontent.com/79243168/151352225-bf4dc4c2-4546-4cb8-80ba-f7ac300ea7f1.png)
 ![Снимок экрана (199)](https://user-images.githubusercontent.com/79243168/151352229-8bf9f0a7-c120-4104-8fbe-12d95a5fee86.png)
 ![Снимок экрана (200)](https://user-images.githubusercontent.com/79243168/151352231-8e029309-737a-468c-8c57-2fd378a6df91.png)
+![Снимок экрана (201)](https://user-images.githubusercontent.com/79243168/151357207-4ebc36f6-f0ce-4830-81d3-6d4c79ec4f91.png)
 
 
 
