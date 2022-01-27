@@ -1,9 +1,10 @@
-import { Card, Button } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import data from "../data";
 import "./flashcard.css";
 import { useState } from "react";
+import Cards from "./trainingCard";
 
-function TrainingCard() {
+export default function TrainingCard() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   function onNext() {
@@ -18,26 +19,22 @@ function TrainingCard() {
     return <p className="endOfCard">Good job</p>;
   } else {
     return (
-      <div className="cardbox">
-        {currentIndex > 0 && (
-          <Button onClick={onPrevious} className="btnLeft">
-            {"<"}
+      <>
+        <div className="cardbox">
+          {currentIndex > 0 && (
+            <Button onClick={onPrevious} className="btnLeft">
+              {"<"}
+            </Button>
+          )}
+          <Cards {...data[currentIndex]} />
+          <Button onClick={onNext} className="btnRight">
+            {">"}
           </Button>
-        )}
-        <Card className="small-card">
-          <Card.Header>{data[currentIndex].english}</Card.Header>
-          <Card.Body>
-            <Card.Text>{data[currentIndex].transcription}</Card.Text>
-            <Button variant="primary">Check</Button>
-          </Card.Body>
-        </Card>
-        {currentIndex + 1} / 24 {data.lenght}
-        <Button onClick={onNext} className="btnRight">
-          {">"}
-        </Button>
-      </div>
+        </div>
+        <div className="cardNumber">
+          {currentIndex + 1} out of {data.length}
+        </div>
+      </>
     );
   }
 }
-
-export default TrainingCard;

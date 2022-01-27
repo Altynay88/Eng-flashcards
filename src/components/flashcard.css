@@ -44,7 +44,7 @@
 
 .btnRight {
   margin-left: 350px;
-  margin-top: -260px;
+  margin-top: -210px;
 }
 
 .endOfCard {
@@ -62,4 +62,9 @@
 .picture {
   margin-top: 100px;
   margin-left: 450px;
+}
+
+.cardNumber {
+  margin-top: 230px;
+  margin-left: 650px;
 }
