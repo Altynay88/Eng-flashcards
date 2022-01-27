@@ -3,6 +3,7 @@ import Menu from "./components/navbar";
 import Cardlist from "./components/cardlist";
 import TrainingCard from "./components/training";
 import Homepage from "./components/homepage";
+import ErrorPage from "./components/errorPage";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path="/Eng-flashcards" element={<Homepage></Homepage>}></Route>
         <Route path="training" element={<TrainingCard></TrainingCard>}></Route>
         <Route path="cardlist" element={<Cardlist></Cardlist>}></Route>
+        <Route path="*" element={<ErrorPage></ErrorPage>}></Route>
       </Routes>
     </Router>
   );
