@@ -9,12 +9,12 @@ function App() {
   return (
     <Router>
       <Menu
-        logo={<Link to="/">Flashcards</Link>}
+        logo={<Link to="/Eng-flashcards">Flashcards</Link>}
         home={<Link to="/cardlist">Cardlist</Link>}
         training={<Link to="/training">Training</Link>}
       />
       <Routes>
-        <Route path="/" element={<Homepage></Homepage>}></Route>
+        <Route path="/Eng-flashcards" element={<Homepage></Homepage>}></Route>
         <Route path="training" element={<TrainingCard></TrainingCard>}></Route>
         <Route path="cardlist" element={<Cardlist></Cardlist>}></Route>
       </Routes>
