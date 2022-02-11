@@ -6,9 +6,7 @@ function Menu({ logo, home, training }) {
       <Navbar bg="light" expand="lg">
         <Container>
           <Navbar.Brand>{logo} </Navbar.Brand>
-          <Nav.Item>
-            <Nav.Link>{home}</Nav.Link>
-          </Nav.Item>
+          <div>{home}</div>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
@@ -16,9 +14,7 @@ function Menu({ logo, home, training }) {
               style={{ maxHeight: "100px" }}
               navbarScroll
             ></Nav>
-            <Nav.Item>
-              <Nav.Link className="trainingNav"> {training}</Nav.Link>
-            </Nav.Item>
+            <div className="trainingNav">{training}</div>
           </Navbar.Collapse>
         </Container>
       </Navbar>

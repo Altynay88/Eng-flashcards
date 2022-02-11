@@ -15,9 +15,9 @@ function App() {
         training={<Link to="/training">Training</Link>}
       />
       <Routes>
-        <Route path="/Eng-flashcards" element={<Homepage></Homepage>}></Route>
-        <Route path="training" element={<TrainingCard></TrainingCard>}></Route>
-        <Route path="cardlist" element={<Cardlist></Cardlist>}></Route>
+        <Route path="/Eng-flashcards" element={<Homepage />}></Route>
+        <Route path="training" element={<TrainingCard />}></Route>
+        <Route path="cardlist" element={<Cardlist />}></Route>
         <Route path="*" element={<ErrorPage></ErrorPage>}></Route>
       </Routes>
     </Router>
