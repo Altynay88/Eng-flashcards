@@ -4,8 +4,9 @@
 ![Снимок экрана (197)](https://user-images.githubusercontent.com/79243168/151352222-000f4230-dee7-40fc-9c7e-b8a710a72e34.png)
 ![Снимок экрана (201)](https://user-images.githubusercontent.com/79243168/153546788-b77abad8-aca2-4a70-8e36-79bfdd974407.png)
 ![Снимок экрана (212)](https://user-images.githubusercontent.com/79243168/153546914-e4f093f2-c351-4b72-920f-0f548253da7b.png)
-
 ![Снимок экрана (213)](https://user-images.githubusercontent.com/79243168/153546795-378f0391-04b6-4d5a-a5c8-93f6d48d34cc.png)
+![Снимок экрана (220)](https://user-images.githubusercontent.com/79243168/153769853-c1846f9f-4520-4506-9e32-1473b96ab2d4.png)
+![Снимок экрана (221)](https://user-images.githubusercontent.com/79243168/153769855-7e4bbf1b-d410-48ca-b627-fa59469bf57c.png)
 
 
 
