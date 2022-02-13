@@ -90,3 +90,7 @@
   margin-top: 50px;
   color: #08023a;
 }
+
+.errorInput {
+  color: red;
+}

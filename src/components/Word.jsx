@@ -2,6 +2,7 @@ import { Button } from "react-bootstrap";
 import React from "react";
 import "./flashcard.css";
 import { useState } from "react";
+import Input from "./Input";
 
 function Word({ english, russian, transcription }) {
   const [isEditBtn, changeEditBtn] = useState(false);
@@ -10,30 +11,6 @@ function Word({ english, russian, transcription }) {
 
   function onClick() {
     changeEditBtn(true);
-  }
-
-  function onChangeEnglish(evt) {
-    setWord({
-      english: evt.target.value,
-      russian: word.russian,
-      transcription: word.transcription,
-    });
-  }
-
-  function onChangeRussian(evt) {
-    setWord({
-      english: word.english,
-      russian: evt.target.value,
-      transcription: word.transcription,
-    });
-  }
-
-  function onChangeTranscription(evt) {
-    setWord({
-      english: word.english,
-      russian: word.russian,
-      transcription: evt.target.value,
-    });
   }
 
   function onSave() {
@@ -69,13 +46,22 @@ function Word({ english, russian, transcription }) {
     return (
       <tr>
         <td>
-          <input value={word.english} onChange={onChangeEnglish} />
+          <Input
+            value={word.english}
+            regexEnglish={new RegExp(/^[a-z\s]+$/i)}
+          />
         </td>
         <td>
-          <input value={word.russian} onChange={onChangeRussian} />
+          <Input
+            value={word.russian}
+            regexRussian={new RegExp(/^[а-я\s]+$/i)}
+          />
         </td>
         <td>
-          <input value={word.transcription} onChange={onChangeTranscription} />
+          <Input
+            value={word.transcription}
+            regexTranscription={new RegExp(/^[0-9\s]+$/)}
+          />
         </td>
         <td>
           <Button onClick={onSave} variant="success" className="successBtn">
